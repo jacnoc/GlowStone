@@ -134,6 +134,8 @@ sub cmd_dns {
 		}
 
 	}
+	
+	return;
 
     return 1;
 }
