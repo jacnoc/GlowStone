@@ -1,4 +1,4 @@
-package M::Portinfo
+package M::Portinfo;
 
 use strict;
 use warnings;
