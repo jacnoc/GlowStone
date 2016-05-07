@@ -19,9 +19,6 @@ sub _void {
 sub cmd_portinfo {
 	my ($src, @argv) = @_;
 
-	if($src->{chan} ne $SCHAN) { return 0; }
-	if($src->{svr} ne $MNET) { return 0; }
-
 	if(!defined($argv[1])) {
 		privmsg($src->{svr}, $src->{chan}, trans('Not enough parameters').q{.});
 		privmsg($src->{svr}, $src->{chan}, trans('Syntax: '.(conf_get('fantasy_pf'))[0][0].'portinfo [Domain/IP] [Port<,port2,port3>]').q{.});
