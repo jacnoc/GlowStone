@@ -50,9 +50,9 @@ sub cmd_dns {
 	$res3->udp_timeout(3);
 	$res2->udp_timeout(3);
 	$res->udp_timeout(3);
-	my $query = $res->search(strip_colorcodes($argv[0]),'A');
-	my $query2 = $res2->search(strip_colorcodes($argv[0]),'AAAA');
-	my $query3 = $res3->search(strip_colorcodes($argv[0]));
+	my $query = $res->search($argv[0],'A');
+	my $query2 = $res2->search($argv[0],'AAAA');
+	my $query3 = $res3->search($argv[0]);
 	my $v4 = 0;
 	my $v6 = 0;
 	my $rd = 0;
