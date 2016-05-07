@@ -47,6 +47,8 @@ sub cmd_dns {
         foreach my $rr ($query->answer) {
             next if $rr->type ne 'A';
             push(@results, $rr->address);
+            next if $rr->type ne 'AAAA';
+            push(@results, $rr->address);
         }
     }
     else {
