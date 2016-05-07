@@ -3,6 +3,7 @@ package M::Portinfo;
 use strict;
 use warnings;
 use API::Std qw(cmd_add cmd_del trans);
+use API::IRC qw(privmsg notice);
 use Socket;
 use Regexp::Common qw/net/;
 
