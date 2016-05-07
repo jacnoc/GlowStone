@@ -7,7 +7,7 @@ use Socket;
 use Regexp::Common qw/net/;
 
 sub _init {
-    cmd_add('PORTINFO', 0, 0, \%M::Portinfo::HELP_PORTINFO, \%M::Portinfo::cmd_portinfo) or return;
+    cmd_add('PORTINFO', 0, 0, \%M::Portinfo::HELP_PORTINFO, \&M::Portinfo::cmd_portinfo) or return;
     
     return 1;
 }
