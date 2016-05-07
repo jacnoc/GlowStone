@@ -19,13 +19,13 @@ sub _void {
 }
 
 our %HELP_PORTINFO = (
-	en => "Displays open ports on a given host. \n\2Syntax:\2 PORTINFO [host] [ports (seperated by comma's)]",
+	en => "Displays open ports on a given host. \2Syntax:\2 PORTINFO [host] [ports (seperated by comma's)]",
 );
 
 sub cmd_portinfo {
 	my ($src, @argv) = @_;
 
-	if(!defined($argv[0])) {
+	if (!defined $argv[0]) {
 		notice($src->{svr}, $src->{nick}, trans('Not enough parameters').q{.});
 		return;
 	}
