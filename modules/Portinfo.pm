@@ -66,6 +66,6 @@ sub cmd_portinfo {
 	}
 }
 
-API::Std::mod_init('Portinfo', 'Russell M Bradford (Converted to module by Chris Tyrrel)', '2.00', '4.0.0a');
+API::Std::mod_init('Portinfo', 'Russell M Bradford (Converted to module by Chris Tyrrel)', '2.00', '3.0.0a11');
 
 # build: perl=5.010000
