@@ -7,14 +7,20 @@ use Socket;
 use Regexp::Common qw/net/;
 
 sub _init {
-    cmd_add('PORTINFO', 0, 0, "Displays open ports on a given host. \n\2Syntax:\2 PORTINFO [host] [ports (seperated by comma's)]", \%M::Portinfo::cmd_portinfo) or return;
+    cmd_add('PORTINFO', 0, 0, \%M::Portinfo::HELP_PORTINFO, \%M::Portinfo::cmd_portinfo) or return;
     
     return 1;
 }
 
 sub _void {
     cmd_del('PORTINFO') or return;
+    
+    return 1;
 }
+
+our %HELP_PORTINFO = (
+	en => "Displays open ports on a given host. \n\2Syntax:\2 PORTINFO [host] [ports (seperated by comma's)]",
+);
 
 sub cmd_portinfo {
 	my ($src, @argv) = @_;
