@@ -19,9 +19,9 @@ sub _void {
 sub cmd_portinfo {
 	my ($src, @argv) = @_;
 
-	if(!defined($argv[1])) {
-		privmsg($src->{svr}, $src->{chan}, trans('Not enough parameters').q{.});
-		return 0;
+	if(!defined($argv[0])) {
+		notice($src->{svr}, $src->{nick}, trans('Not enough parameters').q{.});
+		return;
 	}
 
 	my (@aPorts,@aWorking,$sPortList,$pSocket,$iPort);
