@@ -21,7 +21,6 @@ sub cmd_portinfo {
 
 	if(!defined($argv[1])) {
 		privmsg($src->{svr}, $src->{chan}, trans('Not enough parameters').q{.});
-		privmsg($src->{svr}, $src->{chan}, trans('Syntax: '.(conf_get('fantasy_pf'))[0][0].'portinfo [Domain/IP] [Port<,port2,port3>]').q{.});
 		return 0;
 	}
 
