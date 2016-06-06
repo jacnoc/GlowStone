@@ -68,3 +68,4 @@ Thanks for contributing by reporting issues!
 
 To suggest a feature, you can also let us know in our IRC chatroom.
 
+<!-- CCFLAGS= -std=c99 -->
